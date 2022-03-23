@@ -18328,7 +18328,7 @@ dl li {
   color: #27367f;
   font-size: 1.5rem;
   line-height: 48px;
-  margin-left: 0;
+  margin-left: 20px;
   padding: .25rem 0;
   width: 100%;
 }
@@ -18341,6 +18341,7 @@ dl li {
   max-width: 100%;
   margin: auto;
   vertical-align: middle;
+  margin-top: 20px;
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
