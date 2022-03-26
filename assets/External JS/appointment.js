@@ -1,19 +1,11 @@
 const TOKEN_KEY='com/apposec/user/manifest/token'
-let serviceProvidersDOM = document.getElementById('totalServiceProviders')
-let appointmentsDOM = document.getElementById('totalAppointments')
-let usersDOM = document.getElementById('totalUsers')
-let recentAppointmentDOM=document.getElementById('recentAppointments')
-let logoutDOM=document.getElementById('logout')
+let appointmentsListDOM=document.getElementById('appointmentsList')
 
 let previousTokenData=localStorage.getItem(TOKEN_KEY)
 if(previousTokenData==='' || (previousTokenData===null)){
     window.location.href = "./login.html";
 }
 
-logoutDOM.addEventListener('click',()=>{
-    localStorage.removeItem(TOKEN_KEY)
-    window.location.href = "./login.html";
-})
 
 const init=()=>{
     const authToken=localStorage.getItem(TOKEN_KEY)
@@ -54,24 +46,13 @@ const createDash=()=>{
         authToken:authToken
     }
 
-    axios.post('https://apposes.herokuapp.com/adminDashboard',req)
+    axios.post('https://apposes.herokuapp.com/adminAppointments',req)
      .then((res) => {
         const error=res.data.error
         console.log(res.data)
         
         if(error===0){
-            let tsp=res.data.sizeService
-            serviceProvidersDOM.innerHTML=tsp
-
-            let ta=res.data.sizeRequests
-            appointmentsDOM.innerHTML=ta
-
-            let tu=res.data.sizeUser
-            usersDOM.innerHTML=tu
-
             showList(res.data.tickets)
-
-
         }else {
             
         }
@@ -117,7 +98,7 @@ const showList=(tickets)=>{
     }
 
     tickets.forEach((element) => {
-        recentAppointmentDOM.insertAdjacentHTML("beforeend",templateNode(element.customerName, element.serviceName, element.status, element.dateTime, element.recieptid, element.price))
+        appointmentsListDOM.insertAdjacentHTML("beforeend",templateNode(element.customerName, element.serviceName, element.status, element.dateTime, element.recieptid, element.price))
         
     });
 

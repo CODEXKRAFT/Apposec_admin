@@ -40,31 +40,7 @@
               </div>
             </form>
           </div>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-profile dropdown">
-              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="nav-profile-img">
-                  <img src="../../assets/images/faces/face1.jpg" alt="image">
-                  <span class="availability-status online"></span>
-                </div>
-                <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Suman Bhowal</p>
-                </div>
-              </a>
-              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
-              </div>
-            </li>
-            <li class="nav-item d-none d-lg-block full-screen-link">
-              <a class="nav-link">
-                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-              </a>
-            </li>
-          </ul>
+          
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
           </button>
@@ -79,7 +55,7 @@
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                  <img src="../../assets/images/faces/face1.jpg" alt="profile">
+                  <img src="assets/images/faces/face1.jpg" alt="profile">
                   <span class="login-status online"></span>
                   <!--change to offline or busy as needed-->
                 </div>
@@ -148,64 +124,15 @@
                             <th> Action </th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
+                        <tbody id="serviceProvidersList">
+                          <!-- <tr>
                             <td>Clinic Name</td>
                             <td>Radhakishore Das</td>
                             <td> Clinic</td>
-                            <td>
-                              <label class="badge badge-success">ACCEPTED</label>
-                            </td>
-                            <td> 
-                              <a href="serviceproviderdetails.html">
-                              <label class="badge badge-dark">Details</label>
-                              </a> 
-                          </td>
-                          <td>
-                            <label class="badge badge-danger">Block</label>
-                          </td>
-                          </tr>
-
-                          <tr>
-                            <td>Clinic Name</td>
-                            <td>Radhakishore Das</td>
-                            <td> Clinic</td>
-                            <td>
-                              <label class="badge badge-warning">PENDING</label>
-                            </td>
-                            <td> <label class="badge badge-dark">Details</label> 
-                            </td>
-                            <td>
-                              <label class="badge badge-success">Permit</label>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>Clinic Name</td>
-                            <td>Radhakishore Das</td>
-                            <td> Clinic</td>
-                            <td>
-                              <label class="badge badge-danger">DECLINED</label>
-                            </td>
-                            <td> <label class="badge badge-dark">Details</label> 
-                            </td>
-                            <td>
-                              <label class="badge badge-success">Permit</label>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>Clinic Name</td>
-                            <td>Radhakishore Das</td>
-                            <td> Clinic</td>
-                            <td>
-                              <label class="badge badge-success">ACCEPTED</label>
-                            </td>
-                            <td> <label class="badge badge-dark">Details</label> </td>
-                            <td>
-                              <label class="badge badge-danger">Block</label>
-                            </td>
-                          </tr>
+                            <td><label class="badge badge-success">ACCEPTED</label></td>
+                            <td> <label class="badge badge-dark">Details</label></td>
+                            <td><label class="badge badge-danger">Block</label> </td>
+                          </tr> -->
                           
                         </tbody>
                       </table>
@@ -244,5 +171,6 @@
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/External JS/serviceProvider.js"></script>
   </body>
 </html>

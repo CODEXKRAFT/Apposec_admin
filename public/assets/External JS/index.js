@@ -3,17 +3,11 @@ let serviceProvidersDOM = document.getElementById('totalServiceProviders')
 let appointmentsDOM = document.getElementById('totalAppointments')
 let usersDOM = document.getElementById('totalUsers')
 let recentAppointmentDOM=document.getElementById('recentAppointments')
-let logoutDOM=document.getElementById('logout')
 
 let previousTokenData=localStorage.getItem(TOKEN_KEY)
 if(previousTokenData==='' || (previousTokenData===null)){
     window.location.href = "./login.html";
 }
-
-logoutDOM.addEventListener('click',()=>{
-    localStorage.removeItem(TOKEN_KEY)
-    window.location.href = "./login.html";
-})
 
 const init=()=>{
     const authToken=localStorage.getItem(TOKEN_KEY)
