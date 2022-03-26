@@ -40,31 +40,7 @@
               </div>
             </form>
           </div>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-profile dropdown">
-              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="nav-profile-img">
-                  <img src="../../assets/images/faces/face1.jpg" alt="image">
-                  <span class="availability-status online"></span>
-                </div>
-                <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Suman Bhowal</p>
-                </div>
-              </a>
-              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
-              </div>
-            </li>
-            <li class="nav-item d-none d-lg-block full-screen-link">
-              <a class="nav-link">
-                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-              </a>
-            </li>
-          </ul>
+          
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
           </button>
@@ -79,7 +55,7 @@
             <li class="nav-item nav-profile">
               <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                  <img src="../../assets/images/faces/face1.jpg" alt="profile">
+                  <img src="assets/images/faces/face1.jpg" alt="profile">
                   <span class="login-status online"></span>
                   <!--change to offline or busy as needed-->
                 </div>
@@ -132,59 +108,67 @@
                 <div class="card">
                   <div class="card-body">
 
-                    <form class="forms-sample">
-                      <div class="form-group">
                         <h4 class="card-title">Service Provider Head name</h4>
-                        <h6 class="card-description"> Radha Kishore Das </h6>
-                      </div>
-
-                      <div class="form-group">
+                        <h6 class="card-description" id="serviceProviderName">  </h6>
+                      
                         <h4 class="card-title">Service type</h4>
-                        <h6 class="card-description"> Clinic </h6>
-                      </div>
-
-                      <div class="form-group">
+                        <h6 class="card-description" id="serviceType">  </h6>
+  
                         <h4 class="card-title">Address</h4>
-                        <h6 class="card-description"> LCR-253,Chhend Colony </h6>
+                        <h6 class="card-description" id="serviceAddress">  </h6>
                         
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword4">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" id="exampleSelectGender">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label>File upload</label>
-                        <input type="file" name="img[]" class="file-upload-default">
-                        <div class="input-group col-xs-12">
-                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                          <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                          </span>
+                        <h4 class="card-title">About</h4>
+                        <h6 class="card-description" id="aboutServiceProvider">  </h6>
+
+
+                        <h4 class="card-title">Visiting Hours</h4>
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th> Day </th>
+                                <th> Morning </th>
+                                <th> Evening </th>
+                              </tr>
+                            </thead>
+                            <tbody id="serviceVisitingHours">
+                              
+                            </tbody>
+                          </table>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputCity1">City</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleTextarea1">Textarea</label>
-                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
-                      <button class="btn btn-light">Cancel</button>
-                    </form>
+                        <br>
+                        <br>
+                        <h4 class="card-title">Facilities</h4>
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th> Facility Name </th>
+                                <th> Price </th>
+                                <th> Duration </th>
+                                <th> Description </th>
+                              </tr>
+                            </thead>
+                            <tbody id="serviceFacility">
+                              
+                            </tbody>
+                          </table>
+                        </div>
+
+
+                        
+                        
+                    
+                
+                      
+                      <!-- <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                      <button class="btn btn-light">Cancel</button> -->
+
                   </div>
                 </div>
               </div>
-              
             </div>
+            
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
@@ -215,5 +199,6 @@
     <script src="../../assets/js/file-upload.js"></script>
     <!-- End custom js for this page -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/External JS/serviceProviderDetails.js"></script>
   </body>
 </html>

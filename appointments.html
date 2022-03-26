@@ -40,31 +40,7 @@
               </div>
             </form>
           </div>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-profile dropdown">
-              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="nav-profile-img">
-                  <img src="assets/images/faces/face1.jpg" alt="image">
-                  <span class="availability-status online"></span>
-                </div>
-                <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Suman Bhowal</p>
-                </div>
-              </a>
-              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
-              </div>
-            </li>
-            <li class="nav-item d-none d-lg-block full-screen-link">
-              <a class="nav-link">
-                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-              </a>
-            </li>
-          </ul>
+          
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
           </button>
@@ -147,55 +123,8 @@
                             <th> Price</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              Suman Bhowal
-                            </td>
-                            <td> RGH Hospital</td>
-                            <td>
-                              <label class="badge badge-success">VISITED</label>
-                            </td>
-                            <td> Dec 5, 2017 </td>
-                            <td> WD-12345 </td>
-                            <td> Rs 300</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              Radha Kishore Das
-                            </td>
-                            <td> KTH Hospital </td>
-                            <td>
-                              <label class="badge badge-danger">NOT VISITED</label>
-                            </td>
-                            <td> Dec 12, 2017 </td>
-                            <td> WD-12346 </td>
-                            <td> Rs 300</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              Akshit Sharma
-                            </td>
-                            <td> Sanjeevani Seva Sadan </td>
-                            <td>
-                              <label class="badge badge-warning">ACCEPTED</label>
-                            </td>
-                            <td> Dec 16, 2017 </td>
-                            <td> WD-12347 </td>
-                            <td> Rs 300</td>
-                          </tr>
-                          <tr>
-                            <td>
-                             Niharika Bastia
-                            </td>
-                            <td> Femina Beauty Parlour </td>
-                            <td>
-                              <label class="badge badge-dark">REJECTED</label>
-                            </td>
-                            <td> Dec 3, 2017 </td>
-                            <td> WD-12348 </td>
-                            <td> Rs 300</td>
-                          </tr>
+                        <tbody id="appointmentsList">
+                          
                         </tbody>
                       </table>
                     </div>
@@ -415,5 +344,6 @@
     <script src="assets/js/todolist.js"></script>
     <!-- End custom js for this page -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/External JS/appointment.js"></script>
   </body>
 </html>
