@@ -14,7 +14,7 @@ const init=()=>{
         authToken:authToken
     }
 
-    axios.post('https://apposes.herokuapp.com/authUser',req)
+    axios.post('http://54.152.224.229:3000/authUser',req)
      .then((res) => {
         const error=res.data.error
         // console.log(res.data)
@@ -46,7 +46,7 @@ const createDash=()=>{
         authToken:authToken
     }
 
-    axios.post('https://apposes.herokuapp.com/adminAppointments',req)
+    axios.post('http://54.152.224.229:3000/adminAppointments',req)
      .then((res) => {
         const error=res.data.error
         console.log(res.data)

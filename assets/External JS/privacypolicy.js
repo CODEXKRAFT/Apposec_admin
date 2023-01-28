@@ -5,7 +5,7 @@ let privacyDOM = document.getElementById('privacyPolicy')
 
 
 let empty = {}
-    axios.post('https://apposes.herokuapp.com/policy',empty)
+    axios.post('http://54.152.224.229:3000/policy',empty)
     .then((res) => {
        let policy=res.data.privacyPolicy
        console.log(policy)
